@@ -1,7 +1,10 @@
 package com.example;
 
+import static spark.Spark.*;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello, Jenkins Test!");
+        get("/", (req, res) -> "Hello, World from EC2!");
     }
 }
+
